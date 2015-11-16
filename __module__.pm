@@ -25,8 +25,8 @@ task 'setup', sub {
 	service collectd => ensure => "started";
 };
 
-desc 'Add InfluxDB endpoint';
-task 'plugin-influxdb', sub {
+desc 'InfluxDB endpoint';
+task 'influxdb', sub {
 
 	unless ( is_installed("collectd") ) {
     		Rex::Logger::info "pkg collectd not detected on this node. Aborting", 'error';
