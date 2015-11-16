@@ -1,0 +1,17 @@
+use Rex -feature => ['1.0'];
+use Rex::Ext::ParamLookup;
+
+include qw/
+  Rex::Collectd::Base
+  /;
+
+set connection => 'OpenSSH';
+user 'root';
+
+task "setup", make {
+
+  Rex::Collectd::Base::setup();
+  Rex::Collectd::Base::influxdb(influxdb=>"influx.web.example.com");
+
+};
+
