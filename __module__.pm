@@ -37,7 +37,7 @@ task 'influxdb', sub {
 	my $port     = param_lookup "port" || "25826";
 
 	file "/etc/collectd/collectd.conf.d/network-influxdb.conf",
-		content => template("files/etc/collectd.conf.d/network-influcdb.tmpl", conf => { influxdb => "$influxdb", port => "$port" }),
+		content => template("files/etc/collectd.conf.d/network-influxdb.tmpl", conf => { influxdb => "$influxdb", port => "$port" }),
 		on_change => sub { 
 			say "config updated. ";
 			service collectd => "restart";
