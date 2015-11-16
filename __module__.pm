@@ -26,7 +26,7 @@ task 'influxdb', sub {
    	}
 
 	my $influxdb = param_lookup "influxdb";
-	my $port     = param_lookup "port" || "25826";
+	my $port     = param_lookup "port", "25826";
 
 	file "/etc/collectd/collectd.conf.d/network-influxdb.conf",
 		content => template("files/etc/collectd.conf.d/network-influx.tmpl", conf => { influxdb => "$influxdb", port => "$port" }),
