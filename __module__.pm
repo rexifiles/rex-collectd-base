@@ -3,8 +3,8 @@ use Rex -base;
 use Rex::Ext::ParamLookup;
 
 # Usage: rex setup 
-# Usage: rex plugin-influxdb --influxdb=influx [ --port=12345 ]
-# Usage: rex plugin-del --remove=influxdb
+# Usage: rex influxdb --influxdb=influx [ --port=12345 ]
+# Usage: rex remove --plugin=influxdb
 
 desc 'Set up collectd';
 task 'setup', sub { 
@@ -35,3 +35,9 @@ task 'influxdb', sub {
 			service collectd => "restart";
 			}
 };
+
+desc 'Remove plugin';
+task 'remove', sub {
+
+	Rex::Logger::info "Coming soon. ",'error';
+}
