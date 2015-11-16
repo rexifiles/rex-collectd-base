@@ -9,14 +9,6 @@ use Rex::Ext::ParamLookup;
 desc 'Set up collectd';
 task 'setup', sub { 
 
-	my $params   = shift;
-	my $influxdb = param_lookup "influxdb";
-
-	unless (param_lookup "influxdb") {
-		Rex::Logger::info "You must set the --$_ paramater", 'error';
-		return;
-	}
-	
 	pkg "collectd",
 		ensure => "installed",
 		on_change => sub {
