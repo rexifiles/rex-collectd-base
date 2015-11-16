@@ -1,0 +1,6 @@
+Name: Rex::Collectd::Influx
+Description: Installs collectd onto the directed machine, pointing to a designated influx db
+Author: xarlos <xarlos@xarlos.me>
+License: Apache 2.0
+Require:
+  - Rex::Ext::ParamLookup
