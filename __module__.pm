@@ -1,4 +1,4 @@
-package Rex::Collectd::Influx; 
+package Rex::Collectd::Base; 
 use Rex -base;
 use Rex::Ext::ParamLookup;
 
