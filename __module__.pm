@@ -42,5 +42,4 @@ task 'plugin-influxdb', sub {
 			say "config updated. ";
 			service collectd => "restart";
 			}
-	};
 };
